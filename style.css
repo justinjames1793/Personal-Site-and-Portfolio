@@ -98,3 +98,73 @@ form button {
 .projects h2 {
   margin: 0;                     /* remove the default big space around headings */
 }
+
+/* ===== Resume page ===== */
+.resume {
+  /* Intro: name, tagline, contact line */
+  > header {
+    margin-bottom: 2em;
+
+    h2 {
+      font-size: 200%;
+      margin: 0;
+    }
+
+    p {
+      margin: 0.25em 0;
+      color: oklch(45% 0 0);   /* muted gray */
+    }
+  }
+
+  /* Links in the content (not the nav), slightly darker than the accent so they're readable */
+  header a,
+  section a {
+    color: color-mix(in oklch, var(--color-accent), black 30%);
+  }
+
+  /* Section titles: Education, Experience, ... */
+  section > h2 {
+    font-size: 110%;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.25em;
+    margin-top: 2em;
+  }
+
+  /* Each job / project gets a "trail marker" line */
+  article {
+    border-left: 3px solid var(--color-accent);
+    padding-left: 1em;
+    margin-block: 1.5em;
+
+    h3 {
+      margin: 0;
+    }
+
+    header p {
+      margin: 0;
+      color: oklch(45% 0 0);
+    }
+
+    ul {
+      margin-top: 0.5em;
+    }
+  }
+
+  /* Skills as pill tags */
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    list-style: none;
+    padding: 0;
+
+    li {
+      background: oklch(95% 3% 140);
+      border: 1px solid oklch(85% 5% 140);
+      border-radius: 999px;
+      padding: 0.25em 0.75em;
+    }
+  }
+}
