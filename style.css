@@ -1,6 +1,100 @@
+:root {
+  /* Accent color: forest green */
+  --color-accent: oklch(62% 15% 140);
+
+  /* Lets form controls (checkboxes, radio buttons, etc.) use it too */
+  accent-color: var(--color-accent);
+}
+
 body {
   /* Set line height to 1.5 times the font size
 	   and use the OS’s UI font as the website font
 	 */
   font: 100%/1.5 system-ui;
+
+  /* Keep lines from getting too long on wide screens */
+  max-width: 100ch;
+  /* Center the body horizontally */
+  margin-inline: auto;
+  /* Keep text off the edges of small screens */
+  padding: 1em;
+
+}
+/* Good defaults for every heading */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;     /* tighter line spacing than body text */
+  text-wrap: balance;   /* split wrapped lines into similar lengths */
+}
+
+/* Make the page title much bigger than h2 */
+h1 {
+  font-size: 400%;
+}
+nav {
+  display: flex;
+  /* Space between the nav and the page content */
+  margin-bottom: 1em;
+
+  /* Thin cool-gray line under the whole nav */
+  border-bottom: 1px solid oklch(80% 3% 200);
+}
+
+nav a {
+  flex: 1;
+
+  text-decoration: none;  /* no underline */
+  color: inherit;         /* same color as the surrounding text, not blue/purple */
+  text-align: center;     /* center each link in its box */
+  padding: 0.5em;         /* breathing room around each link */
+}
+
+nav a.current {
+  /* Thick bar under the current page's link */
+  border-bottom: 0.4em solid oklch(90% 3% 200);
+
+  /* 0.5em - 0.4em = 0.1em, so the link stays the same height */
+  padding-bottom: 0.1em;
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  padding-bottom: 0.1em;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+form {
+  display: grid;                    /* make the form a grid container */
+  grid-template-columns: auto 1fr;  /* col 1: as wide as the labels, col 2: the rest */
+  gap: 1em;                         /* spacing between rows and columns */
+}
+
+label {
+  display: grid;                    /* each label is also a grid... */
+  grid-template-columns: subgrid;   /* ...that reuses the form's 2 columns */
+  grid-column: 1 / -1;              /* and spans the full row */
+}
+
+form button {
+  grid-column: 1 / -1;              /* submit button spans the full row too */
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;                      /* space between the cards */
+}
+
+.projects article {
+  display: grid;                 /* each card is a grid... */
+  grid-template-rows: subgrid;   /* ...that uses the parent's rows */
+  grid-row: span 3;              /* and takes up 3 rows: h2, img, p */
+}
+
+.projects h2 {
+  margin: 0;                     /* remove the default big space around headings */
 }
