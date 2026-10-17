@@ -5,6 +5,9 @@
   /* Lets form controls (checkboxes, radio buttons, etc.) use it too */
   accent-color: var(--color-accent);
 }
+html {
+  color-scheme: light dark;
+}
 
 body {
   /* Set line height to 1.5 times the font size
@@ -31,13 +34,17 @@ h1 {
   font-size: 400%;
 }
 nav {
+  /* Semi-transparent border color that looks subtle in both light and dark mode */
+  --border-color: oklch(50% 10% 200 / 40%);
+
   display: flex;
   /* Space between the nav and the page content */
   margin-bottom: 1em;
 
-  /* Thin cool-gray line under the whole nav */
-  border-bottom: 1px solid oklch(80% 3% 200);
+  /* Thin line under the whole nav */
+  border-bottom: 1px solid var(--border-color);
 }
+
 
 nav a {
   flex: 1;
@@ -50,7 +57,7 @@ nav a {
 
 nav a.current {
   /* Thick bar under the current page's link */
-  border-bottom: 0.4em solid oklch(90% 3% 200);
+  border-bottom: 0.4em solid var(--border-color);
 
   /* 0.5em - 0.4em = 0.1em, so the link stays the same height */
   padding-bottom: 0.1em;
@@ -63,8 +70,17 @@ nav a:hover {
 
 input,
 textarea,
-button {
+button,
+select {
   font: inherit;
+}
+
+/* Theme switcher pinned to the top-right corner */
+.color-scheme {
+  position: absolute;   /* take it out of the normal flow */
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;       /* less prominent than the content */
 }
 
 form {
@@ -73,7 +89,7 @@ form {
   gap: 1em;                         /* spacing between rows and columns */
 }
 
-label {
+form label {
   display: grid;                    /* each label is also a grid... */
   grid-template-columns: subgrid;   /* ...that reuses the form's 2 columns */
   grid-column: 1 / -1;              /* and spans the full row */
@@ -112,14 +128,16 @@ form button {
 
     p {
       margin: 0.25em 0;
-      color: oklch(45% 0 0);   /* muted gray */
+      /* Muted text: mix of text color and background, adapts to dark mode */
+      color: color-mix(in oklch, canvastext, canvas 40%);
     }
   }
 
-  /* Links in the content (not the nav), slightly darker than the accent so they're readable */
+  /* Links in the content (not the nav): accent mixed toward the text color,
+     so darker in light mode and lighter in dark mode */
   header a,
   section a {
-    color: color-mix(in oklch, var(--color-accent), black 30%);
+    color: color-mix(in oklch, var(--color-accent), canvastext 30%);
   }
 
   /* Section titles: Education, Experience, ... */
@@ -144,7 +162,8 @@ form button {
 
     header p {
       margin: 0;
-      color: oklch(45% 0 0);
+      /* Same muted text color as the intro */
+      color: color-mix(in oklch, canvastext, canvas 40%);
     }
 
     ul {
@@ -161,8 +180,9 @@ form button {
     padding: 0;
 
     li {
-      background: oklch(95% 3% 140);
-      border: 1px solid oklch(85% 5% 140);
+      /* Light tint of the accent in light mode, dark tint in dark mode */
+      background: color-mix(in oklch, var(--color-accent), canvas 85%);
+      border: 1px solid color-mix(in oklch, var(--color-accent), canvas 60%);
       border-radius: 999px;
       padding: 0.25em 0.75em;
     }
