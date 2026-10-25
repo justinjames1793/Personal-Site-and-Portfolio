@@ -153,3 +153,60 @@ form?.addEventListener('submit', function (event) {
   // Opening a mailto: URL launches the email client with the fields prefilled
   location.href = url;
 });
+
+// Projects ---
+
+// Load a JSON file and return the parsed data
+export async function fetchJSON(url) {
+  try {
+    const response = await fetch(url);
+    console.log(response); // check it in DevTools; delete this line once it works
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+// Render an array of projects into a container element
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  // Guard: no container means nothing to render into
+  if (!containerElement) {
+    console.error('renderProjects: containerElement is missing');
+    return;
+  }
+
+  // Guard: only allow real heading tags, otherwise fall back to h2
+  if (!/^h[1-6]$/.test(headingLevel)) {
+    headingLevel = 'h2';
+  }
+
+  // Clear old content so projects don't get duplicated
+  containerElement.innerHTML = '';
+
+  // Empty or missing data: show a placeholder message
+  if (!projects || projects.length === 0) {
+    containerElement.innerHTML = '<p>No projects to show yet.</p>';
+    return;
+  }
+
+  for (let project of projects) {
+    const article = document.createElement('article');
+    article.innerHTML = `
+      <${headingLevel}>${project.title}</${headingLevel}>
+      <img src="${project.image}" alt="${project.title}">
+      <p>${project.description}</p>
+    `;
+    containerElement.appendChild(article);
+  }
+}
+
+// Get public profile data for a GitHub user
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}

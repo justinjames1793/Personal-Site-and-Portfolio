@@ -111,9 +111,9 @@ form button {
   grid-row: span 3;              /* and takes up 3 rows: h2, img, p */
 }
 
-.projects h2 {
-  margin: 0;                     /* remove the default big space around headings */
-}
+  .projects article > :first-child {
+   margin: 0;                     /* remove the default big space around headings */
+  }
 
 /* ===== Resume page ===== */
 .resume {
@@ -187,4 +187,25 @@ form button {
       padding: 0.25em 0.75em;
     }
   }
+}
+
+/* ===== GitHub stats (home page) ===== */
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* four equal columns */
+  text-align: center;
+}
+
+#profile-stats dt {
+  grid-row: 1;                 /* all labels on the top row */
+  font-size: 80%;
+  text-transform: uppercase;
+  opacity: 0.7;                /* muted; works in light and dark mode */
+}
+
+#profile-stats dd {
+  grid-row: 2;                 /* all numbers on the bottom row */
+  margin: 0;                   /* browsers indent <dd> by default */
+  font-size: 200%;
+  font-weight: bold;
 }
