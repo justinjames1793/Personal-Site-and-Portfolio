@@ -114,7 +114,92 @@ form button {
   .projects article > :first-child {
    margin: 0;                     /* remove the default big space around headings */
   }
+  /* Year under each project description */
+.projects .project-year {
+  font-family: Baskerville, serif;        /* system font; serif is the fallback */
+  font-variant-numeric: oldstyle-nums;    /* numbers that blend into the text */
+  font-style: italic;
+  color: color-mix(in oklch, canvastext, canvas 40%);  /* muted, works in light and dark */
+  margin-top: 0;
+}
+/* Pie chart + legend side by side */
+.container {
+  display: flex;
+  align-items: center;      /* pie and legend centered vertically on each other */
+  gap: 2em;                 /* space between pie and legend */
+  flex-wrap: wrap;          /* on narrow screens, legend drops below the pie */
+  margin-block: 2em;
+}
 
+#projects-pie-plot {
+  flex: 0 0 12em;
+  max-width: 20em;
+  overflow: visible;
+
+  /* smooth fade in/out for every wedge */
+  path {
+    transition: 300ms;
+    cursor: pointer;          /* hints that wedges are clickable (used in the next step) */
+  }
+
+  /* when ANY wedge is hovered, fade out all the OTHER wedges */
+  &:has(path:hover) {
+    path:not(:hover) {
+      opacity: 0.5;
+    }
+  }
+}
+
+.legend {
+  flex: 1;                  /* legend takes up all remaining width */
+  min-width: 12em;          /* below this it wraps under the pie instead of getting cramped */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  list-style: none;
+  padding: 1em;
+  margin: 0;                /* container handles the outer spacing now */
+  border: 1px solid color-mix(in oklch, canvastext, canvas 80%);
+  border-radius: 0.5em;
+}
+.legend-item {
+  display: flex;
+  align-items: center;            /* swatch and text vertically centered */
+  gap: 0.4em;                     /* smaller than the legend's 1em gap (proximity) */
+
+  em {
+    color: color-mix(in oklch, canvastext, canvas 40%);  /* muted count */
+  }
+}
+
+.swatch {
+  display: inline-block;          /* <span> is inline, so this is needed for width/height */
+  width: 1em;
+  aspect-ratio: 1 / 1;            /* square */
+  background-color: var(--color); /* color comes from the <li>'s style attribute */
+  border-radius: 50%;             /* circle; use 0.2em for a rounded square */
+}
+
+/* Selected wedge + its legend item */
+.selected {
+  --color: oklch(60% 45% 0) !important;   /* overrides the inline --color on the <li> */
+
+  &:is(path) {
+    fill: var(--color);                    /* recolor the wedge itself */
+  }
+}
+
+/* Search box on the Projects page */
+.searchBar {
+  display: block;
+  width: 100%;
+  font: inherit;               /* same font as the rest of the page */
+  padding: 0.6em 0.8em;
+  margin-block: 1em 2em;
+  border: 1px solid color-mix(in oklch, canvastext, canvas 80%);
+  border-radius: 0.5em;
+  box-sizing: border-box;      /* padding doesn't push it wider than 100% */
+}
 /* ===== Resume page ===== */
 .resume {
   /* Intro: name, tagline, contact line */

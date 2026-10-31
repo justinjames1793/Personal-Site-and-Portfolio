@@ -1,62 +1,86 @@
 [
-    {
-        "title": "Lorem ipsum dolor sit.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam magnam, architecto laudantium voluptatem distinctio amet? Incidunt ducimus, ratione nesciunt, sint, itaque eligendi magnam nihil labore ad distinctio tempore maxime saepe."
-    },
-    {
-        "title": "Libero vero nisi placeat.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Cum asperiores atque eveniet harum ratione obcaecati placeat perspiciatis odio! Similique explicabo amet dignissimos corrupti reprehenderit, tempora magnam accusantium quam nam provident libero harum, eius molestiae aliquam quibusdam. In, cupiditate."
-    },
-    {
-        "title": "Ipsum et incidunt repellendus.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Omnis in optio fuga non corrupti. Aspernatur, quo pariatur veniam eius facilis enim dicta, sequi tempore, cum atque distinctio dolores velit vero dolorum repudiandae officiis officia optio esse nihil praesentium!"
-    },
-    {
-        "title": "Tempora voluptatum labore nihil.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dolorem eligendi unde porro earum quo dolore cum vero consectetur. Dolorum rerum placeat voluptate ut corporis cum ipsa. Nulla eos, quia fugiat cum pariatur asperiores ducimus. Similique harum nihil consequuntur?"
-    },
-    {
-        "title": "Sint modi quas aperiam.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Expedita necessitatibus natus dicta sapiente molestias quisquam! Deleniti illo voluptatibus maxime beatae, reprehenderit eum minima obcaecati eius? Deleniti repudiandae, dolorum minima quisquam magni ab non reprehenderit laborum natus nostrum incidunt."
-    },
-    {
-        "title": "Accusantium sit non minus.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Asperiores iste necessitatibus ipsa? Nostrum deleniti perspiciatis quam ex soluta aspernatur incidunt architecto dignissimos, ipsa officiis magni rerum odio blanditiis perferendis voluptatum cum consequuntur iusto similique temporibus quis eaque aliquam!"
-    },
-    {
-        "title": "Est voluptatum doloribus eum.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quis praesentium tenetur, soluta consequuntur, adipisci aliquid accusantium minus atque iste aperiam dolorum in. Excepturi dolores amet ea eos modi vel, accusamus pariatur labore tempore reprehenderit expedita dolor quam facere."
-    },
-    {
-        "title": "Tenetur nam error blanditiis?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ipsam labore praesentium rerum quo doloremque quibusdam laboriosam debitis vitae? Voluptatum quia dolor assumenda odio reiciendis sunt culpa recusandae quos cumque rem aspernatur, fugit dolores placeat iusto nisi optio consequuntur."
-    },
-    {
-        "title": "Eum accusamus perspiciatis sit.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Voluptas magni fuga doloremque impedit pariatur voluptatum quam omnis veritatis voluptatibus odit, exercitationem vitae reiciendis itaque repudiandae quisquam quae voluptates praesentium. Praesentium repellendus tempore provident magni soluta? Quidem, quam soluta!"
-    },
-    {
-        "title": "Itaque quis in neque!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quisquam, id ducimus? Similique tenetur nemo sunt a? Ab deleniti architecto quis veritatis iusto praesentium. Nobis unde culpa autem blanditiis necessitatibus aperiam dicta doloremque totam. Eum natus voluptatem deserunt quod."
-    },
-    {
-        "title": "Officiis neque ex laboriosam.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Possimus in corrupti nostrum sapiente, aut accusantium debitis nemo, quas dolor ut hic molestias cum cumque animi at adipisci voluptatum maxime repellendus! Laudantium, rem deleniti et veritatis porro tempora perferendis."
-    },
-    {
-        "title": "Assumenda in voluptatum labore.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Est dolores aperiam dolore, aliquam ut placeat repellat exercitationem ducimus commodi labore facilis? Sed illum aliquam ratione vel nesciunt laudantium exercitationem hic obcaecati. Quam rem officiis earum eligendi neque natus?"
-    }
+  {
+    "title": "Plaza: Campus Opportunities Platform",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Founder of Plaza (formerly Waymark), a platform that brings UC San Diego clubs, students and departments into one place to discover opportunities. Spun out of EIEC's Qualcomm Institute program and sized at 45,000 students and 700+ organizations. I lead a 3-person team across product, engineering and marketing; the core platform is built and the front end is in prototyping alongside customer discovery interviews. Next up: ML recommendations that improve as the user base grows."
+  },
+  {
+    "title": "Automating CREDE's Quarterly Market Report",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "As a finance intern at CREDE Real Estate, I'm automating the company's quarterly market report with a data pipeline for construction-market data. To make the numbers trustworthy, I cataloged 67 market-data sources into a 4-tier reliability framework and traced the report's figures back to verifiable sources such as BLS data via FRED."
+  },
+  {
+    "title": "Stream Enforcement: Piracy Detection Pipeline",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Data lead on a 5-engineer pipeline that detects pirated UFC streams. I designed the PostgreSQL schemas and built containerized Telegram scrapers; the system processes 10,000+ posts per hour and surfaces about 50 confirmed piracy sites every hour."
+  },
+  {
+    "title": "NYPD Complaints: Are Police Held Liable?",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "DSC 106 Project 2, a persuasive visualization built on ProPublica's dataset of civilian complaints against NYPD officers. Our group argued both sides of whether officers are held liable for allegations; I built an accountability funnel showing how few complaints end in discipline."
+  },
+  {
+    "title": "N-Gram Language Models from Project Gutenberg",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "DSC 80 project in Python: I scraped public-domain books from Project Gutenberg (respecting robots.txt crawl delays), tokenized them with regex into words, punctuation and paragraph markers, and built uniform, unigram and N-gram language models with pandas. The N-gram model is built recursively from lower-order models, computes sentence probabilities from conditional N-gram probabilities, and generates new text in the style of Shakespeare and Homer, falling back to shorter contexts when it doesn't have enough preceding words."
+  },
+  {
+    "title": "Image Processing Toolkit & KNN Classifier",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "DSC 20 project with Karsten Lowe: an object-oriented Python image library built from raw RGB pixel arrays. It includes negate, grayscale, rotation, brightness, pixelation and edge detection with a convolution kernel, standard and premium processing tiers with cost tracking, and a k-nearest-neighbors classifier that labels images (for example, daytime vs. nighttime) by Euclidean pixel distance."
+  },
+  {
+    "title": "UC San Diego DataFest 2026",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "2nd Place, Best Use of External Data. My team mapped chronic patient journeys and flagged high-risk communities by joining external demographic data. I also co-built and published the official DataFest 2026 event website."
+  },
+  {
+    "title": "Hawaii Restaurant Success Predictor",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Predicted ratings for 4,301 Hawaii restaurants from choices made before opening. Feature engineering plus a random forest and KMeans geo-clustering raised R² from 0.004 to 0.13. Built in Python with scikit-learn and published as a public web app."
+  },
+  {
+    "title": "EIEC x SoPE Physician-AI Hackathon",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "As co-president of the Engineering Innovators & Entrepreneurs Club, I organized a hackathon pairing physicians with AI builders: about 50 participants, 2 keynotes, industry judges and a $1,000 prize. I handled logistics, registrations and judge outreach."
+  },
+  {
+    "title": "ESG Portfolio Optimizer",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "R&D analyst at UCSD's Sustainable Investment Group. I built a Python backend for ESG-focused portfolio optimization, moved backend services to AWS for speed and scale, researched ESG metrics for the stock analysis models, and maintain the group's web infrastructure on GitHub."
+  },
+  {
+    "title": "Startup Talent Connections at UC San Diego Horizon",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "As an Entrepreneurship Center assistant, I work with startups at UC San Diego Horizon and connect them with student talent; Chakra Tech hired EIEC members I introduced. I also help run Meet the VC office hours and investor events with BOW Capital."
+  },
+  {
+    "title": "South Bay Chill",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Founded a community wellness brand in Hermosa Beach built around beach ice-bath events. I ran logistics, marketing and sales, coordinated partners and sponsors, and used attendance data to adjust outreach and grow engagement."
+  },
+  {
+    "title": "Movie Review Analysis System",
+    "year": "2023",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A C++ text-search application over large sets of movie reviews. It uses a hash table for fast keyword lookup and a priority queue to rank results by relevance, with an object-oriented design built to scale to lots of text."
+  },
+  {
+    "title": "Interactive Campus Map",
+    "year": "2022",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A Google Maps-style web app recreating Stanford's campus map in HTML, CSS and JavaScript, with zoom, panning and clickable building markers."
+  }
 ]
